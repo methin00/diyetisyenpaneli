@@ -35,28 +35,28 @@ export default async function LoginPage(props: {
     }
 
     return (
-        <main className={`${dmSans.className} min-h-screen bg-[radial-gradient(circle_at_10%_10%,_#d7f8e7_0%,_#f5f7f4_40%,_#eef3f0_100%)] p-3 sm:p-5 lg:p-8`}>
-            <div className="mx-auto grid min-h-[calc(100vh-1.5rem)] max-w-7xl overflow-hidden rounded-3xl border border-emerald-100 bg-white/90 shadow-[0_30px_70px_-35px_rgba(6,95,70,0.45)] backdrop-blur sm:min-h-[calc(100vh-2.5rem)] lg:grid-cols-[1.12fr_0.88fr]">
-                <section className="relative min-h-[290px] overflow-hidden lg:min-h-full">
+        <main className={`${dmSans.className} h-[100dvh] overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#d7f8e7_0%,_#f5f7f4_40%,_#eef3f0_100%)]`}>
+            <div className="grid h-full w-full overflow-hidden border-emerald-100 bg-white/90 shadow-[0_30px_70px_-35px_rgba(6,95,70,0.45)] backdrop-blur md:grid-cols-[1.08fr_0.92fr] md:border">
+                <section className="relative hidden h-full overflow-hidden md:block">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594737625785-c75d1f6f6a91?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-emerald-900/70 to-emerald-700/30" />
                     <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-300/20 blur-3xl" />
                     <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-teal-200/20 blur-3xl" />
 
-                    <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white sm:p-8 lg:p-10">
+                    <div className="relative z-10 flex h-full flex-col justify-end p-6 text-white lg:p-10">
                         <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em]">
                             <Sparkles className="h-3.5 w-3.5" />
                             Diyetisyen Paneli
                         </div>
 
-                        <h1 className={`${libre.className} text-3xl leading-tight sm:text-4xl lg:text-5xl`}>
+                        <h1 className={`${libre.className} text-3xl leading-tight lg:text-5xl`}>
                             Danışan sürecinizi tek ekranda, güvenle yönetin.
                         </h1>
-                        <p className="mt-4 max-w-xl text-sm text-emerald-50/90 sm:text-base">
+                        <p className="mt-4 max-w-xl text-sm text-emerald-50/90 lg:text-base">
                             Randevu planlama, takip notları, ölçüm geçmişi ve içerik yönetimi ile profesyonel çalışma akışınızı sade ama güçlü bir yapıda yönetin.
                         </p>
 
-                        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                        <div className="mt-6 grid gap-3 lg:grid-cols-3">
                             <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-3 backdrop-blur">
                                 <p className="text-[11px] uppercase tracking-wide text-emerald-100">Planlama</p>
                                 <p className="mt-1 text-sm font-semibold">Takvim ve müsaitlik</p>
@@ -73,8 +73,8 @@ export default async function LoginPage(props: {
                     </div>
                 </section>
 
-                <section className="flex items-center justify-center bg-white/95 p-4 sm:p-8 lg:p-12">
-                    <div className="w-full max-w-md">
+                <section className="flex h-full items-center justify-center overflow-y-auto bg-white/95 px-4 py-6 sm:px-8 md:py-8 lg:px-12">
+                    <div className="w-full max-w-md md:my-auto">
                         <div>
                             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">Hoş geldiniz</p>
                             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">Panele giriş yapın</h2>
@@ -83,7 +83,7 @@ export default async function LoginPage(props: {
                             </p>
                         </div>
 
-                        <form action="/auth/login" method="post" className="mt-8 space-y-5">
+                        <form action="/auth/login" method="post" className="mt-6 space-y-4">
                             {errorMessage && (
                                 <div className="rounded-xl border border-red-200 bg-red-50/90 p-3 text-sm text-red-700">
                                     <div className="flex items-start gap-2">
@@ -125,7 +125,7 @@ export default async function LoginPage(props: {
                             </Button>
                         </form>
 
-                        <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
+                        <div className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
                             <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">Güvenli Giriş</p>
                             <div className="mt-2 space-y-2 text-sm text-emerald-900">
                                 <p className="flex items-center gap-2">
