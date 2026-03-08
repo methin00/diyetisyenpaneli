@@ -1,0 +1,63 @@
+﻿<svg width="1400" height="1600" viewBox="0 0 1400 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="1600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 250) rotate(45) scale(500 420)">
+      <stop stop-color="#6EE7B7" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#6EE7B7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 1320) rotate(10) scale(430 390)">
+      <stop stop-color="#A7F3D0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#A7F3D0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="coat" x1="640" y1="520" x2="880" y2="1320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="690" y1="650" x2="790" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="1600" fill="url(#bg)"/>
+  <rect width="1400" height="1600" fill="url(#glowA)"/>
+  <rect width="1400" height="1600" fill="url(#glowB)"/>
+
+  <ellipse cx="700" cy="1460" rx="520" ry="120" fill="#052E2B" fill-opacity="0.35"/>
+
+  <rect x="880" y="900" width="250" height="340" rx="26" fill="#ECFDF5" fill-opacity="0.95"/>
+  <rect x="908" y="940" width="194" height="18" rx="9" fill="#A7F3D0"/>
+  <rect x="908" y="980" width="170" height="14" rx="7" fill="#86EFAC"/>
+  <rect x="908" y="1014" width="184" height="14" rx="7" fill="#6EE7B7"/>
+  <rect x="908" y="1048" width="140" height="14" rx="7" fill="#34D399"/>
+
+  <circle cx="235" cy="1080" r="98" fill="#F0FDF4" fill-opacity="0.9"/>
+  <path d="M232 1010C254 1000 279 1012 289 1034C300 1058 288 1086 264 1098C238 1112 205 1101 194 1073C183 1045 198 1018 223 1008L228 1022C211 1029 202 1048 209 1066C217 1086 240 1095 258 1088C275 1081 284 1061 277 1043C270 1025 249 1015 233 1021L232 1010Z" fill="#16A34A"/>
+  <path d="M235 1000C236 972 261 956 285 960" stroke="#166534" stroke-width="12" stroke-linecap="round"/>
+
+  <circle cx="1070" cy="420" r="72" fill="#FDE68A" fill-opacity="0.9"/>
+  <path d="M1038 408H1102" stroke="#92400E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1048 436H1090" stroke="#92400E" stroke-width="10" stroke-linecap="round"/>
+
+  <ellipse cx="720" cy="470" rx="132" ry="148" fill="#F59E0B"/>
+  <path d="M590 430C598 340 670 278 760 288C844 298 900 372 892 454C858 398 818 372 754 368C684 364 640 386 590 430Z" fill="#78350F"/>
+
+  <rect x="596" y="620" width="252" height="738" rx="116" fill="url(#coat)"/>
+  <rect x="680" y="662" width="88" height="540" rx="42" fill="url(#shirt)"/>
+  <path d="M596 842C544 882 516 942 516 1026C516 1132 560 1212 640 1264" stroke="#E2E8F0" stroke-width="72" stroke-linecap="round"/>
+  <path d="M846 842C898 882 926 942 926 1026C926 1132 882 1212 802 1264" stroke="#E2E8F0" stroke-width="72" stroke-linecap="round"/>
+
+  <rect x="500" y="980" width="230" height="320" rx="44" fill="#FFFFFF" fill-opacity="0.95"/>
+  <rect x="530" y="1036" width="170" height="16" rx="8" fill="#A7F3D0"/>
+  <rect x="530" y="1072" width="146" height="14" rx="7" fill="#6EE7B7"/>
+  <rect x="530" y="1104" width="160" height="14" rx="7" fill="#34D399"/>
+  <circle cx="618" cy="1190" r="36" fill="#10B981"/>
+  <path d="M602 1188L614 1201L636 1178" stroke="#ECFDF5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="730" cy="154" r="14" fill="#D1FAE5" fill-opacity="0.8"/>
+  <circle cx="810" cy="210" r="10" fill="#D1FAE5" fill-opacity="0.8"/>
+  <circle cx="1060" cy="290" r="8" fill="#D1FAE5" fill-opacity="0.65"/>
+</svg>

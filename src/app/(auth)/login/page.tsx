@@ -1,4 +1,4 @@
-﻿import { AlertCircle, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react"
+﻿import { AlertCircle, Sparkles } from "lucide-react"
 import { DM_Sans, Libre_Baskerville } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -36,9 +36,20 @@ export default async function LoginPage(props: {
 
     return (
         <main className={`${dmSans.className} h-[100dvh] overflow-hidden bg-[radial-gradient(circle_at_10%_10%,_#d7f8e7_0%,_#f5f7f4_40%,_#eef3f0_100%)]`}>
-            <div className="grid h-full w-full overflow-hidden border-emerald-100 bg-white/90 shadow-[0_30px_70px_-35px_rgba(6,95,70,0.45)] backdrop-blur md:grid-cols-[1.08fr_0.92fr] md:border">
+            <div className="relative grid h-full w-full overflow-hidden border-emerald-100 bg-white/90 shadow-[0_30px_70px_-35px_rgba(6,95,70,0.45)] backdrop-blur md:grid-cols-[1.08fr_0.92fr] md:border">
+                <div className="absolute inset-0 md:hidden">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: "url('/images/dietitian-hero.svg')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/78 via-emerald-900/62 to-emerald-700/45" />
+                </div>
+
                 <section className="relative hidden h-full overflow-hidden md:block">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594737625785-c75d1f6f6a91?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center" />
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: "url('/images/dietitian-hero.svg')" }}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-emerald-900/70 to-emerald-700/30" />
                     <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-300/20 blur-3xl" />
                     <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-teal-200/20 blur-3xl" />
@@ -73,8 +84,8 @@ export default async function LoginPage(props: {
                     </div>
                 </section>
 
-                <section className="flex h-full items-center justify-center overflow-y-auto bg-white/95 px-4 py-6 sm:px-8 md:py-8 lg:px-12">
-                    <div className="w-full max-w-md md:my-auto">
+                <section className="relative z-10 flex h-full items-center justify-center overflow-y-auto px-4 py-6 sm:px-8 md:bg-white/95 md:py-8 lg:px-12">
+                    <div className="w-full max-w-md rounded-2xl border border-white/45 bg-white/80 p-5 shadow-[0_24px_60px_-34px_rgba(2,44,34,0.65)] backdrop-blur-xl md:my-auto md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none">
                         <div>
                             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">Hoş geldiniz</p>
                             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">Panele giriş yapın</h2>
@@ -124,18 +135,6 @@ export default async function LoginPage(props: {
                                 Giriş Yap
                             </Button>
                         </form>
-
-                        <div className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
-                            <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">Güvenli Giriş</p>
-                            <div className="mt-2 space-y-2 text-sm text-emerald-900">
-                                <p className="flex items-center gap-2">
-                                    <ShieldCheck className="h-4 w-4" /> Hesap doğrulaması ile koruma
-                                </p>
-                                <p className="flex items-center gap-2">
-                                    <CheckCircle2 className="h-4 w-4" /> Yetki bazlı erişim kontrolü
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </div>
