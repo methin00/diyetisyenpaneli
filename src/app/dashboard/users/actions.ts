@@ -57,7 +57,7 @@ function isRetryableDeleteError(message: string) {
 }
 
 async function collectStoragePathsRecursively(
-    supabaseAdmin: ReturnType<typeof createSupabaseAdminClient>,
+    supabaseAdmin: ReturnType<typeof createAdminClient>,
     rootPrefix: string
 ) {
     const queue = [rootPrefix]
@@ -111,7 +111,7 @@ async function collectStoragePathsRecursively(
 }
 
 async function deleteDietitianMedia(
-    supabaseAdmin: ReturnType<typeof createSupabaseAdminClient>,
+    supabaseAdmin: ReturnType<typeof createAdminClient>,
     dietitianId: string
 ) {
     const { files, error } = await collectStoragePathsRecursively(supabaseAdmin, dietitianId)
@@ -137,7 +137,7 @@ async function deleteDietitianMedia(
 }
 
 async function deleteByDietitianId(
-    supabaseAdmin: ReturnType<typeof createSupabaseAdminClient>,
+    supabaseAdmin: ReturnType<typeof createAdminClient>,
     tableName: string,
     dietitianId: string
 ) {
@@ -154,7 +154,7 @@ async function deleteByDietitianId(
 }
 
 async function cleanupDietitianData(
-    supabaseAdmin: ReturnType<typeof createSupabaseAdminClient>,
+    supabaseAdmin: ReturnType<typeof createAdminClient>,
     dietitianId: string
 ) {
     const tableOrder = [
