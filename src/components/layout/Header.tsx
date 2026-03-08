@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState, type ComponentType } from "react"
@@ -139,8 +140,15 @@ export function Header({
                 <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-2 sm:gap-3">
                         <Link href="/dashboard" className="flex items-center gap-2.5">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xs shrink-0 sm:h-9 sm:w-9 sm:text-sm">
-                                {initials}
+                            <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg border border-emerald-200/80 bg-white sm:h-9 sm:w-9">
+                                <Image
+                                    src="/favicon-dietitian.svg"
+                                    alt="Diyetisyen Paneli logosu"
+                                    fill
+                                    sizes="36px"
+                                    priority
+                                    className="object-cover p-0.5"
+                                />
                             </div>
                             <span className="hidden text-sm font-bold tracking-tight text-foreground sm:block lg:text-lg">
                                 Diyetisyen Paneli
@@ -293,8 +301,14 @@ export function Header({
                 >
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2.5">
-                            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                                {initials}
+                            <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-emerald-200/80 bg-white">
+                                <Image
+                                    src="/favicon-dietitian.svg"
+                                    alt="Diyetisyen Paneli logosu"
+                                    fill
+                                    sizes="36px"
+                                    className="object-cover p-0.5"
+                                />
                             </div>
                             <div>
                                 <p className="text-sm font-semibold leading-tight">Navigasyon</p>
